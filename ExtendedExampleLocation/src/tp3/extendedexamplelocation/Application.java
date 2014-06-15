@@ -91,7 +91,7 @@ public class Application extends Activity implements ObserverLocation {
     @Override
 	public void notifyLocationUpdated(Location location) {
 		// ACá actualiza valor de contexto del usuario y cambia los valores de los textview
-		this.user.setPositionContextValue(location);
+    	this.getUser().setContextFeature("position", location);
 		getLatitudeText().setText(String.valueOf(location.getLatitude()));
 		getLongitudeText().setText(String.valueOf(location.getLongitude()));		
 	}
